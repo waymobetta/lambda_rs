@@ -1,13 +1,12 @@
 [package]
-name = "lambda-rs"
-version = "0.1.0"
 authors = ["waymobetta <waymobetta@protonmail.com>"]
 edition = "2018"
+name = "lambda-rs"
+version = "0.1.0"
 
 [dependencies]
 lambda_runtime = "0.2.1"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde = {version = "1", features = ["derive"]}
 serde_derive = "1"
 
 [[bin]]

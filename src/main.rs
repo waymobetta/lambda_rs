@@ -13,6 +13,12 @@ struct OutputPayload {
     message: String,
 }
 
+impl OutputPayload {
+    fn new(message: String) -> Self {
+        Self { message }
+    }
+}
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // lambda macro to invoke handler
     lambda!(handler);
@@ -24,8 +30,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 fn handler(event: InputPayload, _c: Context) -> Result<OutputPayload, HandlerError> {
     println!("[handler] received input: {}", event.message);
 
+    // init new instance of OutputPayload
+    let output_payload: OutputPayload = OutputPayload::new("bar".to_string());
+
     // return result
-    Ok(OutputPayload {
-        message: "bar".to_string(),
-    })
+    Ok(output_payload)
 }
