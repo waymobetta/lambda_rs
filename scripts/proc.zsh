@@ -12,7 +12,7 @@ printf "building.."
 
 printf "done\n"
 
-# copy and rename binary release
+# copy binary release to project root
 printf "copying.."
 
 {
