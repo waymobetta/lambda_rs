@@ -21,9 +21,7 @@ rustup target add x86_64-unknown-linux-musl
 
 4. create lambda function within AWS instance
 
-5. rename lambda function within scripts/proc.zsh
-
-6. run build script
+5. run build script
 ```zsh
 chmod +x /scripts/proc.zsh
 ./scripts/proc.zsh
