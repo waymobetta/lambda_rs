@@ -14,26 +14,16 @@ git clone git@github.com:waymobetta/lambda-rs.git
 brew install filosottile/musl-cross/musl-cross
 ```
 
-3. add linker to rust targets
+3. add linker to rustup target
 ```zsh
 rustup target add x86_64-unknown-linux-musl
 ```
 
-4. create .cargo directory
-```zsh
-mkdir .cargo
-```
+4. create lambda function within AWS instance
 
-5. add linker to .cargo/config
-```zsh
-echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' > .cargo/config
-```
+5. rename lambda function within scripts/proc.zsh
 
-6. create lambda function within AWS instance
-
-7. rename lambda function within scripts/proc.zsh
-
-8. run build script
+6. run build script
 ```zsh
 chmod +x /scripts/proc.zsh
 ./scripts/proc.zsh
