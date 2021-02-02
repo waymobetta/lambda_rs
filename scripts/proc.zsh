@@ -24,7 +24,7 @@ printf "copying.."
 
 printf "done\n"
 
-# zip binary to prepare for Lambda
+# zip binary to prepare for lambda
 printf "zipping.."
 
 {
@@ -35,7 +35,7 @@ printf "zipping.."
 }
 printf "done\n"
 
-# upload to Lambda function
+# upload to lambda function
 printf "deploying.."
 
 {
